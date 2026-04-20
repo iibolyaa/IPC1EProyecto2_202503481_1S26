@@ -16,7 +16,9 @@
             <preferred-size width="200" height="200"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <dividerLocation value="250"/>
+        </properties>
         <border type="none"/>
         <children>
           <grid id="904c3" binding="Pnl_panel_principal" layout-manager="CardLayout" hgap="0" vgap="0">
