@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Pnl_tienda">
-  <grid id="27dc6" binding="Pnl_vista_tienda" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="Pnl_vista_tienda" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="863" height="605"/>
+      <xy x="20" y="82" width="863" height="658"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
       <splitpane id="66aef">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="200"/>
           </grid>
         </constraints>
         <properties>
-          <dividerLocation value="315"/>
+          <dividerLocation value="600"/>
         </properties>
         <border type="none"/>
         <children>
@@ -73,103 +73,13 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="5ff8a" class="javax.swing.JButton" binding="button1" default-binding="true">
-                    <constraints>
-                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="150"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="37d3" class="javax.swing.JButton" binding="button2" default-binding="true">
-                    <constraints>
-                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="150"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="3fdbd" class="javax.swing.JButton" binding="button3" default-binding="true">
-                    <constraints>
-                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="150"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="3e5b5" class="javax.swing.JButton" binding="button4" default-binding="true">
-                    <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="150"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="4fb89" class="javax.swing.JButton" binding="button5" default-binding="true">
-                    <constraints>
-                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="150"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="20be0" class="javax.swing.JButton" binding="button6" default-binding="true">
-                    <constraints>
-                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="150"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="9eb0e" class="javax.swing.JButton" binding="button7" default-binding="true">
-                    <constraints>
-                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="150"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="4ffe7" class="javax.swing.JButton" binding="button8" default-binding="true">
-                    <constraints>
-                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="150"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="37932" class="javax.swing.JButton" binding="button9" default-binding="true">
-                    <constraints>
-                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="150"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Button"/>
-                    </properties>
-                  </component>
-                  <component id="d583a" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+                  <component id="d583a" class="javax.swing.JComboBox" binding="comboBox_Plataforma">
                     <constraints>
                       <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="1aff2" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+                  <component id="1aff2" class="javax.swing.JComboBox" binding="comboBox_Genero">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -191,41 +101,486 @@
                       <text value="Género:"/>
                     </properties>
                   </component>
+                  <grid id="f9e92" layout-manager="GridBagLayout">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="2e1ec" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="1"/>
+                          <text value="Stardew Valley"/>
+                        </properties>
+                      </component>
+                      <component id="72e60" class="javax.swing.JLabel" binding="RPG">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <labelFor value="1aff2"/>
+                          <text value="RPG"/>
+                        </properties>
+                      </component>
+                      <component id="f5ffb" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="2"/>
+                          <text value="Q117.00"/>
+                        </properties>
+                      </component>
+                      <component id="462c7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <icon value="img/sv.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="36091" class="javax.swing.JButton" binding="añadirAlCarritoButton" default-binding="true">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1114167"/>
+                          <font name="Century Gothic" size="14" style="1"/>
+                          <text value="+ Añadir al Carrito"/>
+                        </properties>
+                      </component>
+                      <component id="ace91" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Switch"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="74331" layout-manager="GridBagLayout">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="d498d" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="1"/>
+                          <text value="Hollow Knight"/>
+                        </properties>
+                      </component>
+                      <component id="5a49" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <labelFor value="1aff2"/>
+                          <text value="Metroidvania"/>
+                        </properties>
+                      </component>
+                      <component id="8f635" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="2"/>
+                          <text value="Q117.00"/>
+                        </properties>
+                      </component>
+                      <component id="f0353" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <icon value="img/hk.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="a3c6f" class="javax.swing.JButton" default-binding="true">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1114167"/>
+                          <font name="Century Gothic" size="14" style="1"/>
+                          <text value="+ Añadir al Carrito"/>
+                        </properties>
+                      </component>
+                      <component id="df866" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <text value="PS5"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="c3de9" layout-manager="GridBagLayout">
+                    <constraints>
+                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="d7134" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="1"/>
+                          <text value="Mario Kart"/>
+                        </properties>
+                      </component>
+                      <component id="d339a" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <labelFor value="1aff2"/>
+                          <text value="Arcade"/>
+                        </properties>
+                      </component>
+                      <component id="959c6" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="2"/>
+                          <text value="Q500.00"/>
+                        </properties>
+                      </component>
+                      <component id="ab3b7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <icon value="img/sm.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="3207a" class="javax.swing.JButton" default-binding="true">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1114167"/>
+                          <font name="Century Gothic" size="14" style="1"/>
+                          <text value="+ Añadir al Carrito"/>
+                        </properties>
+                      </component>
+                      <component id="8f75d" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Switch"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="5d39" layout-manager="GridBagLayout">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="3af52" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="1"/>
+                          <text value="Animal Crossing"/>
+                        </properties>
+                      </component>
+                      <component id="28114" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <labelFor value="1aff2"/>
+                          <text value="Cozy"/>
+                        </properties>
+                      </component>
+                      <component id="7bf33" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="2"/>
+                          <text value="Q450.00"/>
+                        </properties>
+                      </component>
+                      <component id="78c33" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <icon value="img/ac.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="d2e38" class="javax.swing.JButton" default-binding="true">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1114167"/>
+                          <font name="Century Gothic" size="14" style="1"/>
+                          <text value="+ Añadir al Carrito"/>
+                        </properties>
+                      </component>
+                      <component id="c50a0" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Switch"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="43bee" layout-manager="GridBagLayout">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="36ba8" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="1"/>
+                          <text value="Cuphead"/>
+                        </properties>
+                      </component>
+                      <component id="5a555" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <labelFor value="1aff2"/>
+                          <text value="Plataformas"/>
+                        </properties>
+                      </component>
+                      <component id="1405e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="2"/>
+                          <text value="Q100.00"/>
+                        </properties>
+                      </component>
+                      <component id="41399" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <icon value="img/cuphead.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="772f5" class="javax.swing.JButton" default-binding="true">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1114167"/>
+                          <font name="Century Gothic" size="14" style="1"/>
+                          <text value="+ Añadir al Carrito"/>
+                        </properties>
+                      </component>
+                      <component id="36a5c" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Switch"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="317f9" layout-manager="GridBagLayout">
+                    <constraints>
+                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="983c5" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="1"/>
+                          <text value="Hogwarts Legacy"/>
+                        </properties>
+                      </component>
+                      <component id="93a0b" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <labelFor value="1aff2"/>
+                          <text value="RPG"/>
+                        </properties>
+                      </component>
+                      <component id="1d1" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="2"/>
+                          <text value="Q468.00"/>
+                        </properties>
+                      </component>
+                      <component id="22dc6" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <icon value="img/hp.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="30b02" class="javax.swing.JButton" default-binding="true">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1114167"/>
+                          <font name="Century Gothic" size="14" style="1"/>
+                          <text value="+ Añadir al Carrito"/>
+                        </properties>
+                      </component>
+                      <component id="1655e" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <text value="PS5"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="531ac" layout-manager="GridBagLayout">
+                    <constraints>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="feb86" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="1"/>
+                          <text value="Overcooked"/>
+                        </properties>
+                      </component>
+                      <component id="45e8d" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <labelFor value="1aff2"/>
+                          <text value="Acción"/>
+                        </properties>
+                      </component>
+                      <component id="74603" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="18" style="2"/>
+                          <text value="Q300.00"/>
+                        </properties>
+                      </component>
+                      <component id="da7c2" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <icon value="img/oc.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="6bc3d" class="javax.swing.JButton" default-binding="true">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="0.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <background color="-1114167"/>
+                          <font name="Century Gothic" size="14" style="1"/>
+                          <text value="+ Añadir al Carrito"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
                 </children>
               </grid>
             </children>
           </scrollpane>
         </children>
       </splitpane>
-      <grid id="60a07" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="10" bottom="0" right="0"/>
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="-1" height="30"/>
-          </grid>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <component id="14e79" class="javax.swing.JTextField" binding="textField1" default-binding="true">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="793b5" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font name="Century Gothic" size="20" style="1"/>
-              <text value="Tienda"/>
-            </properties>
-          </component>
-        </children>
-      </grid>
     </children>
   </grid>
 </form>

@@ -3,7 +3,7 @@ import clases.Juego;
 
 public class ListaCarrito {
     private NodoCarrito raiz;
-    private NodoCarrito aux;
+    private NodoCarrito actual;
 
     public ListaCarrito(){
         this.raiz = null;
@@ -12,22 +12,40 @@ public class ListaCarrito {
     public void insertar(Juego juego){
         NodoCarrito nuevoNodo = new NodoCarrito(juego);
 
-        if(this.raiz == null){
-            this.raiz = nuevoNodo;
+        if(raiz == null){
+            raiz = nuevoNodo;
         }else{
-            aux = raiz;
-            while(aux.getSig() != null){
-                aux = aux.getSig();
+            actual = raiz;
+            while(actual.getSig() != null){
+                actual = actual.getSig();
             }
-            aux.getSig().setSig(nuevoNodo);
+            actual.getSig().setSig(nuevoNodo);
         }
     }
 
     public void eliminar(Juego juego){
-        NodoCarrito aux = raiz;
+        actual = raiz;
 
-        if(aux.getJuego() == juego){
-          
+        if(actual.getJuego() == juego){
+            raiz = actual.getSig();
         }
+
+        /* Se buscará en la lista a través de los apuntadores donde se encuentra el juego */
+        while(actual.getSig() != null) {
+
+            if (actual.getSig().getJuego() == juego) {
+                actual = actual.getSig();
+            }
+
+            //Si no lo encuentra seguirá asignando el apuntador siguiente para buscar
+            actual = actual.getSig();
+        }
+    }
+
+    public boolean estaVacia(){
+        if(raiz == null){
+            return true;
+        }
+        return false;
     }
 }

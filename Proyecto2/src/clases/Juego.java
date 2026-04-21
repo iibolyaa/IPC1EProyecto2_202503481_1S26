@@ -68,6 +68,6 @@ public class Juego {
     }
 
     public void reducirStock(int cantidad){
-
+        stock = stock - cantidad;
     }
 }
