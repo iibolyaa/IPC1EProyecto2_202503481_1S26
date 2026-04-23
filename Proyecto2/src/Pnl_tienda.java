@@ -25,13 +25,17 @@ public class Pnl_tienda extends Component {
     private JButton Btn_oc;
     private JTextField busqueda;
     private JTable tablaCarrito;
+    private JTable tablaHistorial;
     private JButton Btn_eliminarItem;
-    private JButton confirmarCompraButton;
-    private JTable table1;
+    private JButton Btn_confirmarCompra;
     private JButton Btn_ac;
-    private JButton limpiarCarritoButton;
+    private JButton Btn_limpiarCarrito;
+    private JScrollPane scrollhistorial;
     private DefaultTableModel tablaModeloCarrito;
+    private DefaultTableModel tablaModeloHistorial;
+
     ListaCarrito carrito = new ListaCarrito();
+    ListaHistorial historial = new ListaHistorial();
 
     public Pnl_tienda(){
         Btn_sv.addActionListener(e -> agregar_sv());
@@ -42,6 +46,8 @@ public class Pnl_tienda extends Component {
         Btn_hl.addActionListener(e -> agregar_hl());
         Btn_oc.addActionListener(e -> agregar_oc());
         Btn_eliminarItem.addActionListener(e -> eliminarItem());
+        Btn_limpiarCarrito.addActionListener(e -> limpiarCarrito());
+        Btn_confirmarCompra.addActionListener(e -> confirmarCompra());
     }
 
     private void agregar_sv(){
@@ -192,6 +198,34 @@ public class Pnl_tienda extends Component {
         }
     }
 
+    private void limpiarCarrito(){
+        carrito.limpiarCarrito();;
+        listarCarrito();
+    }
+
+    private void confirmarCompra(){
+        if(historial.procesarCompra(carrito)){
+            listarCarrito();
+            listarHistorial();
+        }
+    }
+
+    private void listarHistorial(){
+        this.tablaModeloHistorial.setRowCount(0);
+
+        historial.setActual(historial.getRaiz());
+
+        while(historial.getActual() != null){
+            NodoHistorial linea = historial.getActual();
+
+            Object[] renglonOperador = {
+                    linea.getRegistro()
+            };
+            this.tablaModeloHistorial.addRow(renglonOperador);
+            historial.setActual(historial.getActual().getSig());
+        }
+    }
+
     public JPanel getPnl_vista_tienda() {
         return Pnl_vista_tienda;
     }
@@ -202,5 +236,10 @@ public class Pnl_tienda extends Component {
         String[] cabeceros = {"Código", "Nombre", "Precio", "Cantidad"};
         this.tablaModeloCarrito.setColumnIdentifiers(cabeceros);
         this.tablaCarrito = new JTable(tablaModeloCarrito);
+
+        this.tablaModeloHistorial = new DefaultTableModel(0,1);
+        String[] cabeceros1 = {"Descripción"};
+        this.tablaModeloHistorial.setColumnIdentifiers(cabeceros1);
+        this.tablaHistorial = new JTable(tablaModeloHistorial);
     }
 }

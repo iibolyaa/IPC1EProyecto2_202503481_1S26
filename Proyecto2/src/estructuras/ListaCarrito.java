@@ -19,7 +19,7 @@ public class ListaCarrito {
             while(actual.getSig() != null){
                 actual = actual.getSig();
             }
-            actual.getSig().setSig(nuevoNodo);
+            actual.setSig(nuevoNodo);
         }
     }
 
@@ -42,14 +42,14 @@ public class ListaCarrito {
         }
     }
 
-    public boolean estaVacia(){
+    public boolean estaVacio(){
         if(raiz == null){
             return true;
         }
         return false;
     }
 
-    /*Inicia buscando si el juego a comprar ya ha sido comprado con anterioridad
+    /*Inicia buscando si el juego a agregar ya ha sido agregado con anterioridad
     en caso de que sí, solamente actualiza la cantidad.
      */
 
@@ -72,8 +72,13 @@ public class ListaCarrito {
 
         ItemCarrito item = new ItemCarrito(juego, cantidad);
         NodoCarrito nuevoNodo = new NodoCarrito(item);
+
         item.getJuego().setStock(item.getJuego().getStock() - cantidad);
         insertar(nuevoNodo);
+    }
+
+    public void limpiarCarrito(){
+        raiz = null;
     }
 
     public NodoCarrito getRaiz() {

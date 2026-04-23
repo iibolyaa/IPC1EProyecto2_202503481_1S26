@@ -1,10 +1,7 @@
 package datos;
 import clases.*;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class Catalogo {
     private static String nombreArchivo = "catalogo.txt";
@@ -62,4 +59,50 @@ public class Catalogo {
         return null;
     }
 
+    public static void modificarStock(){
+        try{
+            BufferedWriter escritor = new BufferedWriter(new FileWriter(nombreArchivo));
+            for(int i = 0; i < contadorJuegos; i++){
+                Juego j = juegosdisponibles[i];
+                String linea =
+                        j.getCodigou() + "|" +
+                        j.getNombre() + "|" +
+                        j.getGenero() + "|" +
+                        j.getPrecio() + "|" +
+                        j.getPlataforma() + "|" +
+                        j.getStock() + "|" +
+                        j.getDescripcion();
+
+                escritor.write(linea);
+                escritor.newLine();
+            }
+            escritor.close();
+        }catch (IOException e){
+            System.out.println("Error al actualizar el archivo" + e.getMessage());
+        }
+    }
+
+    public static String getNombreArchivo() {
+        return nombreArchivo;
+    }
+
+    public static void setNombreArchivo(String nombreArchivo) {
+        Catalogo.nombreArchivo = nombreArchivo;
+    }
+
+    public static Juego[] getJuegosdisponibles() {
+        return juegosdisponibles;
+    }
+
+    public static void setJuegosdisponibles(Juego[] juegosdisponibles) {
+        Catalogo.juegosdisponibles = juegosdisponibles;
+    }
+
+    public static int getContadorJuegos() {
+        return contadorJuegos;
+    }
+
+    public static void setContadorJuegos(int contadorJuegos) {
+        Catalogo.contadorJuegos = contadorJuegos;
+    }
 }
