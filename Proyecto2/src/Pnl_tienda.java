@@ -31,6 +31,7 @@ public class Pnl_tienda extends Component {
     private JButton Btn_ac;
     private JButton Btn_limpiarCarrito;
     private JScrollPane scrollhistorial;
+    private JButton Btn_Buscar;
     private DefaultTableModel tablaModeloCarrito;
     private DefaultTableModel tablaModeloHistorial;
 
@@ -189,24 +190,45 @@ public class Pnl_tienda extends Component {
     }
 
     private void eliminarItem(){
-        var renglon = tablaCarrito.getSelectedRow();
-        if(renglon != -1){
-            var item = tablaCarrito.getModel().getValueAt(renglon, 1).toString();
-            carrito.eliminar(item);
+        if(!carrito.estaVacio()) {
+            var renglon = tablaCarrito.getSelectedRow();
+            if (renglon != -1) {
+                var item = tablaCarrito.getModel().getValueAt(renglon, 1).toString();
+                carrito.eliminar(item);
 
-            listarCarrito();
+                listarCarrito();
+            }
+        }else{
+            JOptionPane.showMessageDialog(
+                    SwingUtilities.getWindowAncestor(this),
+                    "No hay productos en el carrito"
+            );
         }
     }
 
     private void limpiarCarrito(){
-        carrito.limpiarCarrito();;
-        listarCarrito();
+        if(!carrito.estaVacio()) {
+            carrito.limpiarCarrito();
+            listarCarrito();
+        }else{
+            JOptionPane.showMessageDialog(
+                    SwingUtilities.getWindowAncestor(this),
+                    "No hay productos en el carrito"
+            );
+        }
     }
 
     private void confirmarCompra(){
-        if(historial.procesarCompra(carrito)){
-            listarCarrito();
-            listarHistorial();
+        if(!carrito.estaVacio()){
+            if(historial.procesarCompra(carrito)){
+                listarCarrito();
+                listarHistorial();
+            }
+        }else {
+            JOptionPane.showMessageDialog(
+                    SwingUtilities.getWindowAncestor(this),
+                    "No hay productos en el carrito"
+            );
         }
     }
 

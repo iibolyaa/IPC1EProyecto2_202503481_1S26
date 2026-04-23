@@ -1,6 +1,7 @@
-JG001|Stardew Valley|RPG|117.0|Switch|3|RPG de vida en el campo
+JG001|Stardew Valley|RPG|117.0|Switch|2|RPG de vida en el campo
 JG002|Hollow Knight|Metroidvania|117.0|PS5|9|Una aventura a través de un vasto reino de insectos y héroes
 JG003|Mario Kart|Arcade|500.0|Switch|7|Competición de karts en el universo Mario
-JG004|Cuphead|Plataformas|160.0|Switch|14|Videojuego de pequeña taza en acción
-JG005|Hogwarts Legacy|RPG|468.0|Switch|8|Juego de mundo abierto ambientado en el universo de Harry Potter
-JG006|Overcooked|Accion|300.0|Switch|10|Caótico juego de cocina cooperativo
+JG004|Animal Crossing|Cozy|450.0|Switch|14|Interactua en un mundo de animales
+JG005|Cuphead|Plataformas|160.0|Switch|14|Videojuego de pequeña taza en acción
+JG006|Hogwarts Legacy|RPG|468.0|Switch|8|Juego de mundo abierto ambientado en el universo de Harry Potter
+JG007|Overcooked|Accion|300.0|Switch|9|Caótico juego de cocina cooperativo

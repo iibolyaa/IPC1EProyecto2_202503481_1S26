@@ -24,20 +24,23 @@ public class ListaCarrito {
     }
 
     public void eliminar(String item){
-        actual = raiz;
 
-        if(actual.getItem().getJuego().getNombre() == item){
-            raiz = actual.getSig();
+        if(raiz.getItem().getJuego().getNombre().equals(item)){
+            raiz = raiz.getSig();
         }
 
-        /* Se buscará en la lista a través de los apuntadores donde se encuentra el juego */
-        while(actual.getSig() != null) {
+        NodoCarrito anterior = raiz;
+        NodoCarrito actual = raiz.getSig();
 
-            if (actual.getSig().getItem().getJuego().getNombre() == item) {
-                actual = actual.getSig();
+        /* Se buscará en la lista a través de los apuntadores donde se encuentra el juego */
+        while(actual != null) {
+
+            if (actual.getItem().getJuego().getNombre().equals(item)){
+                anterior.setSig(actual.getSig());
             }
 
             //Si no lo encuentra seguirá asignando el apuntador siguiente para buscar
+            anterior = actual;
             actual = actual.getSig();
         }
     }

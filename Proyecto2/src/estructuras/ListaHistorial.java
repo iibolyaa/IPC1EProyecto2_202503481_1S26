@@ -33,10 +33,8 @@ public class ListaHistorial {
 
         while(ItemActual != null){
 
-            String codigoJuego = ItemActual.getItem().getJuego().getCodigou();
-            int cantidad = ItemActual.getItem().getCantidadjuegos();
-
-            for(int i = 0; i < Catalogo.getJuegosdisponibles().length; i++){
+/*           String codigoJuego = ItemActual.getItem().getJuego().getCodigou();//
+                for(int i = 0; i < Catalogo.getJuegosdisponibles().length; i++){
                 if(codigoJuego == Catalogo.getJuegosdisponibles()[i].getCodigou()){
 
                     Juego juegocarrito = Catalogo.getJuegosdisponibles()[i];
@@ -45,14 +43,21 @@ public class ListaHistorial {
                     descripcion += Catalogo.getJuegosdisponibles()[i].getNombre() + "x" + cantidad + ", ";
                     break;
                 }
-            }
+            } */
+
+            int cantidad = ItemActual.getItem().getCantidadjuegos();
+
+            Juego juegocarrito =  ItemActual.getItem().getJuego();
+            total += ItemActual.getItem().getSubtotal(juegocarrito, cantidad);
+            descripcion += juegocarrito.getNombre() + "x" + cantidad + ", ";
+
             ItemActual = ItemActual.getSig();
         }
 
+        //Actualizar en el archivo del catálogo
         Catalogo.modificarStock();
 
-        //Actualizar en el archivo del catálogo
-
+        //Crear nodo con los respectivos datos
         Date hoy = new Date();
 
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yy");
@@ -64,7 +69,7 @@ public class ListaHistorial {
         String registro = fecha + "|" + hora + "|" + descripcion + "|" + total;
         NodoHistorial historial = new NodoHistorial(registro);
 
-        //Insertarlo a la lista
+        //Insertarlo a la lista y guardar en archivo de historial
         InsertarAlInicio(historial);
         Historial.registroCompra(registro);
 
