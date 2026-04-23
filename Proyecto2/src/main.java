@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import datos.*;
 
 public class main extends JFrame{
     private JPanel panel1;
@@ -43,6 +44,8 @@ public class main extends JFrame{
 
     public static void main(String args[]) {
         new main().setVisible(true);
+
+        Catalogo.CargarDatos();
     }
 
 

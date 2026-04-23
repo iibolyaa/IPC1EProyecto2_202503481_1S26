@@ -1,21 +1,21 @@
 package estructuras;
-import clases.Juego;
+import clases.*;
 
 public class NodoCarrito {
-    private Juego juego;
+    private ItemCarrito item;
     private NodoCarrito sig;
 
-    public NodoCarrito(Juego juego) {
-        this.juego =  juego;
+    public NodoCarrito(ItemCarrito item) {
+        this.item =  item;
         this.sig = null;
     }
 
-    public Juego getJuego() {
-        return juego;
+    public ItemCarrito getItem() {
+        return item;
     }
 
-    public void setJuego(Juego juego) {
-        this.juego = juego;
+    public void setItem(ItemCarrito item) {
+        this.item = item;
     }
 
     public NodoCarrito getSig() {

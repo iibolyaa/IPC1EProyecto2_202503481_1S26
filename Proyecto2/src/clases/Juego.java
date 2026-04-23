@@ -8,15 +8,17 @@ public class Juego {
     private double precio;
     private String plataforma;
     private int stock;
+    private String descripcion;
 
     //Constructor
-    public Juego(String codigou, String nombre, String genero, double precio, String plataforma, int stock){
+    public Juego(String codigou, String nombre, String genero, double precio, String plataforma, int stock, String descripcion){
         this.codigou = codigou;
         this.nombre = nombre;
         this.genero = genero;
         this.precio = precio;
         this.plataforma = plataforma;
         this.stock = stock;
+        this.descripcion = descripcion;
     }
 
     public String getCodigou() {
@@ -67,7 +69,16 @@ public class Juego {
         this.stock = stock;
     }
 
+    public String getDescripcion(){
+        return descripcion;
+    }
+
+    public void setDescripcion(){
+        this.descripcion = descripcion;
+    }
+
     public void reducirStock(int cantidad){
         stock = stock - cantidad;
     }
+
 }
