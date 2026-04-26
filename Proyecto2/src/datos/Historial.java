@@ -1,14 +1,15 @@
 package datos;
 
+import clases.Juego;
 import estructuras.ListaCarrito;
+import estructuras.NodoHistorial;
+import estructuras.*;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 public class Historial {
     private static String nombreArchivo = "historial.txt";
+    private static ListaHistorial historial = new ListaHistorial();
 
 
     public Historial(){
@@ -38,5 +39,37 @@ public class Historial {
                 escritor.close();
             }
         }
+    }
+
+    public static void CargarDatos() {
+        try {
+            BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                String descripcion = linea;
+
+                NodoHistorial nuevoNodo = new NodoHistorial(descripcion);
+                historial.InsertarAlInicio(nuevoNodo);
+            }
+            lector.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String getNombreArchivo() {
+        return nombreArchivo;
+    }
+
+    public static void setNombreArchivo(String nombreArchivo) {
+        Historial.nombreArchivo = nombreArchivo;
+    }
+
+    public static ListaHistorial getHistorial() {
+        return historial;
+    }
+
+    public static void setHistorial(ListaHistorial historial) {
+        Historial.historial = historial;
     }
 }

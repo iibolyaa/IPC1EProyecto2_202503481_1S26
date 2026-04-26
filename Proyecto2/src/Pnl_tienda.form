@@ -155,7 +155,7 @@
                       <text value="Plataforma:"/>
                     </properties>
                   </component>
-                  <grid id="f9e92" layout-manager="GridBagLayout">
+                  <grid id="f9e92" binding="StardewValley" layout-manager="GridBagLayout">
                     <constraints>
                       <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
                         <preferred-size width="220" height="191"/>
@@ -226,7 +226,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="74331" layout-manager="GridBagLayout">
+                  <grid id="74331" binding="HollowKnight" layout-manager="GridBagLayout">
                     <constraints>
                       <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -295,7 +295,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="c3de9" layout-manager="GridBagLayout">
+                  <grid id="c3de9" binding="MarioKart" layout-manager="GridBagLayout">
                     <constraints>
                       <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -364,7 +364,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="5d39" layout-manager="GridBagLayout">
+                  <grid id="5d39" binding="AnimalCrossing" layout-manager="GridBagLayout">
                     <constraints>
                       <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
                         <preferred-size width="232" height="191"/>
@@ -435,7 +435,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="43bee" layout-manager="GridBagLayout">
+                  <grid id="43bee" binding="Cuphead" layout-manager="GridBagLayout">
                     <constraints>
                       <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -504,7 +504,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="317f9" layout-manager="GridBagLayout">
+                  <grid id="317f9" binding="HogwartsLegacy" layout-manager="GridBagLayout">
                     <constraints>
                       <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -573,7 +573,7 @@
                       </component>
                     </children>
                   </grid>
-                  <grid id="531ac" layout-manager="GridBagLayout">
+                  <grid id="531ac" binding="Overcooked" layout-manager="GridBagLayout">
                     <constraints>
                       <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
                         <preferred-size width="232" height="195"/>

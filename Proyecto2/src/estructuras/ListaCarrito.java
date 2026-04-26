@@ -25,8 +25,13 @@ public class ListaCarrito {
 
     public void eliminar(String item){
 
+        if(raiz == null){
+            return;
+        }
+
         if(raiz.getItem().getJuego().getNombre().equals(item)){
             raiz = raiz.getSig();
+            return;
         }
 
         NodoCarrito anterior = raiz;

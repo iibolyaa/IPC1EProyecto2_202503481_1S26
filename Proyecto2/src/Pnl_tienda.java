@@ -1,5 +1,7 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.event.DocumentListener;
+import javax.swing.event.DocumentEvent;
 
 import clases.*;
 import datos.*;
@@ -32,13 +34,32 @@ public class Pnl_tienda extends Component {
     private JButton Btn_limpiarCarrito;
     private JScrollPane scrollhistorial;
     private JButton Btn_Buscar;
+    private JPanel StardewValley;
+    private JPanel HollowKnight;
+    private JPanel MarioKart;
+    private JPanel AnimalCrossing;
+    private JPanel Cuphead;
+    private JPanel HogwartsLegacy;
+    private JPanel Overcooked;
     private DefaultTableModel tablaModeloCarrito;
     private DefaultTableModel tablaModeloHistorial;
 
     ListaCarrito carrito = new ListaCarrito();
     ListaHistorial historial = new ListaHistorial();
+    Historial historial1 = new Historial();
 
     public Pnl_tienda(){
+        StardewValley.setName("StardewValley");
+        HollowKnight.setName("HollowKnight");
+        MarioKart.setName("MarioKart");
+        AnimalCrossing.setName("AnimalCrossing");
+        Cuphead.setName("Cuphead");
+        HogwartsLegacy.setName("HogwartsLegacy");
+        Overcooked.setName("Overcooked");
+
+        Historial.CargarDatos();
+        listarHistorial();
+
         Btn_sv.addActionListener(e -> agregar_sv());
         Btn_hk.addActionListener(e -> agregar_hk());
         Btn_mk.addActionListener(e -> agregar_mk());
@@ -49,6 +70,13 @@ public class Pnl_tienda extends Component {
         Btn_eliminarItem.addActionListener(e -> eliminarItem());
         Btn_limpiarCarrito.addActionListener(e -> limpiarCarrito());
         Btn_confirmarCompra.addActionListener(e -> confirmarCompra());
+        Btn_Buscar.addActionListener(e -> busqueda());
+
+        busqueda.getDocument().addDocumentListener(new DocumentListener() {
+            public void insertUpdate(DocumentEvent e) { busquedaTexto(); }
+            public void removeUpdate(DocumentEvent e) { busquedaTexto(); }
+            public void changedUpdate(DocumentEvent e) { busquedaTexto(); }
+        });
     }
 
     private void agregar_sv(){
@@ -178,13 +206,13 @@ public class Pnl_tienda extends Component {
         while(carrito.getActual() != null){
             ItemCarrito item = carrito.getActual().getItem();
 
-            Object[] renglonOperador = {
+            Object[] renglonCarrito = {
                     item.getJuego().getCodigou(),
                     item.getJuego().getNombre(),
                     item.getJuego().getPrecio(),
                     item.getCantidadjuegos()
             };
-            this.tablaModeloCarrito.addRow(renglonOperador);
+            this.tablaModeloCarrito.addRow(renglonCarrito);
             carrito.setActual(carrito.getActual().getSig());
         }
     }
@@ -201,8 +229,7 @@ public class Pnl_tienda extends Component {
         }else{
             JOptionPane.showMessageDialog(
                     SwingUtilities.getWindowAncestor(this),
-                    "No hay productos en el carrito"
-            );
+                    "No hay productos en el carrito");
         }
     }
 
@@ -213,8 +240,7 @@ public class Pnl_tienda extends Component {
         }else{
             JOptionPane.showMessageDialog(
                     SwingUtilities.getWindowAncestor(this),
-                    "No hay productos en el carrito"
-            );
+                    "No hay productos en el carrito");
         }
     }
 
@@ -232,20 +258,76 @@ public class Pnl_tienda extends Component {
         }
     }
 
-    private void listarHistorial(){
+    public void listarHistorial(){
         this.tablaModeloHistorial.setRowCount(0);
 
-        historial.setActual(historial.getRaiz());
+        historial1.getHistorial().setActual(historial1.getHistorial().getRaiz());
 
-        while(historial.getActual() != null){
-            NodoHistorial linea = historial.getActual();
+        while(historial1.getHistorial().getActual() != null){
+            NodoHistorial linea = historial1.getHistorial().getActual();
 
-            Object[] renglonOperador = {
+            Object[] renglonHistorial = {
                     linea.getRegistro()
             };
-            this.tablaModeloHistorial.addRow(renglonOperador);
-            historial.setActual(historial.getActual().getSig());
+            this.tablaModeloHistorial.addRow(renglonHistorial);
+            historial1.getHistorial().setActual(historial1.getHistorial().getActual().getSig());
         }
+    }
+
+    private void busqueda(){
+        String plataforma = comboBox_Plataforma.getSelectedItem().toString();
+        String genero = comboBox_Genero.getSelectedItem().toString();
+
+
+        for(int i = 0; i < Catalogo.getContadorJuegos(); i++) {
+            Juego j = Catalogo.getJuegosdisponibles()[i];
+
+            boolean coincidePlataforma = plataforma.equals("Todas") || j.getPlataforma().equals(plataforma);
+            boolean coincideGenero = genero.equals("Todos") || j.getGenero().equals(genero);
+
+            String nombrePanel = j.getNombre().replace(" ", "");
+            Component comp = buscarComponente(Pnl_vista_juegos, nombrePanel);
+
+            if (comp != null) {
+                comp.setVisible(coincidePlataforma || coincideGenero);
+            }else{
+                JOptionPane.showMessageDialog(
+                        SwingUtilities.getWindowAncestor(this),
+                        "No se encontraron coincidencias"
+                );
+            }
+        }
+
+        Pnl_vista_juegos.revalidate();
+        Pnl_vista_juegos.repaint();
+    }
+
+    private void busquedaTexto(){
+        String texto = busqueda.getText().toLowerCase().trim();
+
+        for(int i = 0; i < Catalogo.getContadorJuegos(); i++){
+            Juego j = Catalogo.getJuegosdisponibles()[i];
+            boolean coincideTexto = texto.isEmpty() || j.getNombre().toLowerCase().contains(texto) || j.getCodigou().toLowerCase().contains(texto);
+
+            String nombrePanel = j.getNombre().replace(" ", "");
+            Component comp = buscarComponente(Pnl_vista_juegos, nombrePanel);
+
+            if(comp != null){
+                comp.setVisible(coincideTexto);
+            }
+        }
+
+        Pnl_vista_juegos.revalidate();
+        Pnl_vista_juegos.repaint();
+    }
+
+    private Component buscarComponente(Container contenedor, String nombre){
+        for(Component comp : contenedor.getComponents()){
+            if(nombre.equals(comp.getName())){
+                return comp;
+            }
+        }
+        return null;
     }
 
     public JPanel getPnl_vista_tienda() {

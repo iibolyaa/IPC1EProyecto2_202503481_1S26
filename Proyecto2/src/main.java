@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import datos.*;
+import estructuras.*;
+import clases.*;
 
 public class main extends JFrame{
     private JPanel panel1;
@@ -20,6 +22,7 @@ public class main extends JFrame{
     Pnl_torneo Pnl_torneo = new Pnl_torneo();
     Pnl_recompensas Pnl_recompensas = new Pnl_recompensas();
     Pnl_reportes Pnl_reportes = new Pnl_reportes();
+
 
     CardLayout vista;
 
@@ -45,6 +48,8 @@ public class main extends JFrame{
     public static void main(String args[]) {
         new main().setVisible(true);
         Catalogo.CargarDatos();
+
+        Usuario UsuarioActual = new Usuario("U001", 0, 0);
     }
 
 
