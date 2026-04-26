@@ -5,3 +5,4 @@ JG004|Animal Crossing|Cozy|450.0|Switch|14|Interactua en un mundo de animales
 JG005|Cuphead|Plataformas|160.0|Switch|12|Videojuego de pequeña taza en acción
 JG006|Hogwarts Legacy|RPG|468.0|Switch|8|Juego de mundo abierto ambientado en el universo de Harry Potter
 JG007|Overcooked|Accion|300.0|Switch|8|Caótico juego de cocina cooperativo
+Carta-001|Bulbasaur|Planta|Comun|3|3|3|Proyecto2/src/img/Carta-001.png|

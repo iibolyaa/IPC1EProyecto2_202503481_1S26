@@ -92,4 +92,8 @@ public class main extends JFrame{
         SwingUtilities.updateComponentTreeUI(this);
         this.repaint();
     }
+
+    public JPanel getPnl_panel_principal() {
+        return Pnl_panel_principal;
+    }
 }

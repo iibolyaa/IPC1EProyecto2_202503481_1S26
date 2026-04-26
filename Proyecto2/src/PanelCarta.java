@@ -24,7 +24,7 @@ public class PanelCarta extends JPanel {
             Image img = new ImageIcon(carta.getImagen())
                     .getImage()
                     .getScaledInstance(100, 100, Image.SCALE_SMOOTH);
-            add(new JLabel(new ImageIcon(img)), BorderLayout.CENTER);
+            add(new JButton(new ImageIcon(img)), BorderLayout.CENTER);
     }
 
         JLabel nombre = new JLabel(carta.getNombre(), SwingConstants.CENTER);

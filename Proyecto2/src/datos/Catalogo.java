@@ -1,5 +1,6 @@
 package datos;
 import clases.*;
+import estructuras.NodoMatriz;
 
 import java.io.*;
 
@@ -29,6 +30,7 @@ public class Catalogo {
             BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
             String linea;
             while ((linea = lector.readLine()) != null) {
+                if(linea.contains("JG")) {
                     String[] partes = linea.split("\\|");
 
                     String codigou = partes[0];
@@ -42,6 +44,7 @@ public class Catalogo {
                     Juego nuevoJuego = new Juego(codigou, nombre, genero, precio, plataforma, stock, descripcion);
                     juegosdisponibles[contadorJuegos] = nuevoJuego;
                     contadorJuegos++;
+                }
             }
             lector.close();
         } catch (IOException e) {
@@ -80,6 +83,34 @@ public class Catalogo {
         }catch (IOException e){
             System.out.println("Error al actualizar el archivo" + e.getMessage());
         }
+    }
+
+    public static Carta buscarCarta(String codigou){
+        try {
+            BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                if(linea.contains(codigou)) {
+                    String[] partes = linea.split("\\|");
+
+                    String codigo = partes[0];
+                    String nombre = partes[1];
+                    String tipo = partes[2];
+                    String rareza = partes[3];
+                    int ataque = Integer.parseInt(partes[4]);
+                    int defensa = Integer.parseInt(partes[5]);
+                    int ps = Integer.parseInt(partes[6]);
+                    String imagen = partes[7];
+
+                    Carta nuevaCarta = new Carta(codigo, nombre, tipo, rareza, ataque, defensa, ps);
+                    return nuevaCarta;
+                }
+            }
+            lector.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static String getNombreArchivo() {

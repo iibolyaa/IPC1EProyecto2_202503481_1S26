@@ -9,7 +9,7 @@ public class MatrizAlbum {
     private int columnas = 4;
     private NodoMatriz raiz;
 
-    public MatrizAlbum(int filas, int columnas){
+    public MatrizAlbum(){
         this.filas = filas;
         this.columnas = columnas;
         this.matriz = new NodoMatriz[filas][columnas];
@@ -17,6 +17,8 @@ public class MatrizAlbum {
         this.raiz = matriz[0][0];
     }
 
+    /*Método que crea los nodos y los enlaza según el tamaño que se prestableció
+    con anterioridad*/
     private void construir(){
         // Crear la cuadricula
         for(int f = 0; f < filas; f++){

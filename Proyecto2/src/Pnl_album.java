@@ -1,31 +1,10 @@
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Pnl_album {
     private JPanel Pnl_vista_album;
-    private JPanel Pnl_Carta1;
-    private JPanel Pnl_Carta2;
-    private JPanel Pnl_Carta3;
-    private JPanel Pnl_Carta4;
-    private JPanel Pnl_Carta5;
-    private JPanel Pnl_Carta6;
-    private JPanel Pnl_Carta7;
-    private JPanel Pnl_Carta13;
-    private JPanel Pnl_Carta19;
-    private JPanel Pnl_Carta8;
-    private JPanel Pnl_Carta9;
-    private JPanel Pnl_Carta10;
-    private JPanel Pnl_Carta11;
-    private JPanel Pnl_Carta12;
-    private JPanel Pnl_Carta14;
-    private JPanel Pnl_Carta15;
-    private JPanel Pnl_Carta16;
-    private JPanel Pnl_Carta17;
-    private JPanel Pnl_Carta18;
-    private JPanel Pnl_Carta24;
-    private JPanel Pnl_Carta20;
-    private JPanel Pnl_Carta21;
-    private JPanel Pnl_Carta22;
-    private JPanel Pnl_Carta23;
     private JButton Btn_Intercambiar;
     private JButton Btn_Agregar;
     private JTextField textField1;
@@ -34,6 +13,26 @@ public class Pnl_album {
     private JButton Btn_buscar;
     private JPanel Pnl_vista_carta;
     private JPanel Pnl_vista_cartas;
+
+    public Pnl_album() {
+        Pnl_vista_cartas.setLayout(new GridLayout(4, 6, 5, 5));
+        inicializarMatriz();
+
+        Btn_Agregar.addActionListener(e -> setBtn_Agregar());
+    }
+
+    private void setBtn_Agregar(){
+        main mainFrame = (main) SwingUtilities.getWindowAncestor(Pnl_album.this.getPnl_vista_album());
+        AgregarCarta agregarCarta = new AgregarCarta(mainFrame);
+        mainFrame.setVisible(true);
+        agregarCarta.setVisible(true);
+    }
+
+    private void inicializarMatriz(){
+        for (int i = 0; i < 24; i++) {
+            Pnl_vista_cartas.add(new PanelCarta(null));
+        }
+    }
 
     public JPanel getPnl_vista_album() {
         return Pnl_vista_album;
