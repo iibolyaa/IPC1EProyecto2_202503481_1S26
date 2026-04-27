@@ -66,7 +66,7 @@ public class PanelCarta extends JPanel {
     }
 
     public void resaltar() {
-        setBorder(BorderFactory.createLineBorder(Color.MAGENTA, 3));
+        setBorder(BorderFactory.createLineBorder(Color.BLUE, 3));
         revalidate();
         repaint();
     }

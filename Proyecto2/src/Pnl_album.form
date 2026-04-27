@@ -71,7 +71,7 @@
               <text value="Agregar"/>
             </properties>
           </component>
-          <component id="21a" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+          <component id="21a" class="javax.swing.JTextField" binding="BusquedaCarta">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -86,16 +86,10 @@
             <properties>
               <model>
                 <item value="Rareza"/>
-              </model>
-            </properties>
-          </component>
-          <component id="e21fa" class="javax.swing.JComboBox" binding="comboBox_tipo">
-            <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <model>
-                <item value="Tipo"/>
+                <item value="Comun"/>
+                <item value="Poco Comun"/>
+                <item value="Raro"/>
+                <item value="Legendario"/>
               </model>
             </properties>
           </component>
@@ -105,6 +99,22 @@
             </constraints>
             <properties>
               <text value="Buscar"/>
+            </properties>
+          </component>
+          <component id="e21fa" class="javax.swing.JComboBox" binding="comboBox_tipo">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <model>
+                <item value="Tipo"/>
+                <item value="Planta"/>
+                <item value="Veneno"/>
+                <item value="Normal"/>
+                <item value="Agua"/>
+                <item value="Electrico"/>
+                <item value="Hada"/>
+              </model>
             </properties>
           </component>
         </children>
