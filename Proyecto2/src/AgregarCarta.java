@@ -1,4 +1,4 @@
-import datos.Catalogo;
+import datos.*;
 import clases.*;
 import estructuras.MatrizAlbum;
 
@@ -13,17 +13,14 @@ public class AgregarCarta extends JDialog{
     private JButton Btn_Agregar;
     private JButton Btn_Regresar;
     private main mainFrame;
-    MatrizAlbum matrizAlbum = new MatrizAlbum();
+    MatrizAlbum album = new MatrizAlbum();
 
-    //private JPanel celdaDestino;
-
-    public AgregarCarta(main mainFrame){
+    public AgregarCarta(main mainFrame, JPanel panel){
         super(mainFrame, "Agregar Carta", true);
-        //this.celdaDestino = celdaDestino;
         InicializarForma();
         this.mainFrame = mainFrame;
 
-        Btn_Agregar.addActionListener(e -> NuevaCarta());
+        Btn_Agregar.addActionListener(e -> NuevaCarta(panel));
         Btn_Regresar.addActionListener(e -> setBtn_Regresar());
     }
 
@@ -33,7 +30,7 @@ public class AgregarCarta extends JDialog{
         setLocationRelativeTo(null);
     }
 
-    public void NuevaCarta(){
+    public void NuevaCarta(JPanel Pnl_vista_cartas){
         String codigoCarta = Campo_Carta.getText();
 
         if(codigoCarta.isEmpty()){
@@ -44,18 +41,18 @@ public class AgregarCarta extends JDialog{
         }else{
             Carta nuevaCarta = Catalogo.buscarCarta(codigoCarta);
             if(nuevaCarta != null){
-                matrizAlbum.insertarCarta(nuevaCarta);
+                int posicion = album.insertarCarta(nuevaCarta);
 
-                PanelCarta panelCarta = new PanelCarta(nuevaCarta);
+                if (posicion != -1) {
+                    Pnl_vista_cartas.remove(posicion);
+                    Pnl_vista_cartas.add(new PanelCarta(nuevaCarta), posicion);
+                    Pnl_vista_cartas.revalidate();
+                    Pnl_vista_cartas.repaint();
+                } else {
+                    JOptionPane.showMessageDialog(this, "El álbum está lleno");
+                }
 
-               /* celdaDestino.setLayout(new BorderLayout());
-                celdaDestino.removeAll();
-                celdaDestino.add(panelCarta, BorderLayout.CENTER);
-                celdaDestino.revalidate();
-                celdaDestino.repaint();
-
-                dispose();*/
-
+                dispose();
             }else{
                 JOptionPane.showMessageDialog(
                         SwingUtilities.getWindowAncestor(this),

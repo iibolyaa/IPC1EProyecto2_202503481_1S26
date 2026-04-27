@@ -45,8 +45,7 @@ public class Pnl_tienda extends Component {
     private DefaultTableModel tablaModeloHistorial;
 
     ListaCarrito carrito = new ListaCarrito();
-    ListaHistorial historial = new ListaHistorial();
-    Historial historial1 = new Historial();
+    ListaHistorial insertarhistorial = new ListaHistorial();
 
     public Pnl_tienda(){
         StardewValley.setName("StardewValley");
@@ -246,7 +245,7 @@ public class Pnl_tienda extends Component {
 
     private void confirmarCompra(){
         if(!carrito.estaVacio()){
-            if(historial.procesarCompra(carrito)){
+            if(insertarhistorial.procesarCompra(carrito)){
                 listarCarrito();
                 listarHistorial();
             }
@@ -261,16 +260,16 @@ public class Pnl_tienda extends Component {
     public void listarHistorial(){
         this.tablaModeloHistorial.setRowCount(0);
 
-        historial1.getHistorial().setActual(historial1.getHistorial().getRaiz());
+        Historial.getHistorial().setActual(Historial.getHistorial().getRaiz());
 
-        while(historial1.getHistorial().getActual() != null){
-            NodoHistorial linea = historial1.getHistorial().getActual();
+        while(Historial.getHistorial().getActual() != null){
+            NodoHistorial linea = Historial.getHistorial().getActual();
 
             Object[] renglonHistorial = {
                     linea.getRegistro()
             };
             this.tablaModeloHistorial.addRow(renglonHistorial);
-            historial1.getHistorial().setActual(historial1.getHistorial().getActual().getSig());
+            Historial.getHistorial().setActual(Historial.getHistorial().getActual().getSig());
         }
     }
 

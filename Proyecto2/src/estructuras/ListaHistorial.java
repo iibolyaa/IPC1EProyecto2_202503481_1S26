@@ -70,7 +70,7 @@ public class ListaHistorial {
         NodoHistorial historial = new NodoHistorial(registro);
 
         //Insertarlo a la lista y guardar en archivo de historial
-        InsertarAlInicio(historial);
+        Historial.getHistorial().InsertarAlInicio(historial);
         Historial.registroCompra(registro);
         // UsuarioActual.otorgarXP(50);
 

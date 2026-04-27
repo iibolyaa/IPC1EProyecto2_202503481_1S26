@@ -23,7 +23,7 @@ public class Pnl_album {
 
     private void setBtn_Agregar(){
         main mainFrame = (main) SwingUtilities.getWindowAncestor(Pnl_album.this.getPnl_vista_album());
-        AgregarCarta agregarCarta = new AgregarCarta(mainFrame);
+        AgregarCarta agregarCarta = new AgregarCarta(mainFrame, Pnl_vista_cartas);
         mainFrame.setVisible(true);
         agregarCarta.setVisible(true);
     }

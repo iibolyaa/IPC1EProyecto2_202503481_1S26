@@ -1,5 +1,6 @@
 package estructuras;
 import clases.*;
+import datos.Album;
 
 //Clase para almacenar las cartas de la sesión actual
 
@@ -39,26 +40,42 @@ public class MatrizAlbum {
     }
 
 
-    public boolean insertarCarta(Carta carta){
-        NodoMatriz actualfila = raiz;
+    public int insertarCarta(Carta carta){
+        NodoMatriz actualfila = Album.getAlbum().getRaiz();
+        int indice = 0;
 
         while(actualfila != null){
             NodoMatriz actualcolumna = actualfila;
         while(actualcolumna != null){
             if(actualcolumna.getCarta() == null){
                 actualcolumna.setCarta(carta);
-                return true;
+
+                String registro = carta.getCodigo() + "|" + carta.getNombre() + "|" + carta.getTipo() + "|"
+                                        + carta.getRareza() + "|" + carta.getAtaque() + "|" + carta.getDefensa() +
+                                        "|" + carta.getPs();
+                Album.registroCarta(registro);
+
+                return indice;
             }
+            indice++;
             actualcolumna = actualcolumna.getEste();
         }
         actualfila =  actualfila.getSur();
         }
-        return false;
+        return -1;
     }
 
     public NodoMatriz getNodoMatriz(int fila, int columna) {
         if (fila < 0 || fila >= filas || columna < 0 || columna >= columnas) return null;
         return matriz[fila][columna];
+    }
+
+    public NodoMatriz getRaiz() {
+        return raiz;
+    }
+
+    public void setRaiz(NodoMatriz raiz) {
+        this.raiz = raiz;
     }
 
     public NodoMatriz[][] getMatriz() {
