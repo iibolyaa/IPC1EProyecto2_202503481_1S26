@@ -3,7 +3,7 @@ JG002|Hollow Knight|Metroidvania|117.0|PS5|7|Una aventura a través de un vasto 
 JG003|Mario Kart|Arcade|500.0|Switch|3|Competición de karts en el universo Mario
 JG004|Animal Crossing|Cozy|450.0|Switch|13|Interactua en un mundo de animales
 JG005|Cuphead|Plataformas|160.0|Switch|11|Videojuego de pequeña taza en acción
-JG006|Hogwarts Legacy|RPG|468.0|Switch|7|Juego de mundo abierto ambientado en el universo de Harry Potter
+JG006|Hogwarts Legacy|RPG|468.0|PS5|7|Juego de mundo abierto ambientado en el universo de Harry Potter
 JG007|Overcooked|Accion|300.0|Switch|7|Caótico juego de cocina cooperativo
 Carta-001|Bulbasaur|Planta|Comun|3|3|3|Proyecto2/src/img/Carta-001.png
 Carta-002|Charmander|Fuego|Poco Comun|4|3|3|Proyecto2/src/img/Carta-002.png

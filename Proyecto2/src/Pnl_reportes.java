@@ -16,7 +16,7 @@ public class Pnl_reportes {
 
     public Pnl_reportes() {
         Btn_RInventario.addActionListener(e -> {
-
+            ReporteInventario();
         });
 
         Btn_RVentas.addActionListener(e -> {
@@ -29,6 +29,22 @@ public class Pnl_reportes {
             Historial.cargarDatosReporte();
 
             File archivo = new File("Ventas.html");
+            if (archivo.exists()) {
+                Desktop.getDesktop().browse(archivo.toURI());
+            } else {
+                JOptionPane.showMessageDialog(null, "El archivo no fue encontrado.");
+            }
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Error al abrir el reporte: " + ex.getMessage());
+        }
+    }
+
+    private void ReporteInventario(){
+        try {
+            Catalogo.cargarDatosReporte();
+
+            File archivo = new File("Inventario.html");
             if (archivo.exists()) {
                 Desktop.getDesktop().browse(archivo.toURI());
             } else {

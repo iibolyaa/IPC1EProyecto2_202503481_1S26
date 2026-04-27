@@ -62,7 +62,13 @@ public class Historial {
         String html = "<html><head><title>Reporte</title></head><body>";
         html += "<h1>Ventas</h1>";
         html += "<table>";
-        html += "<th>" + "Fecha" + "</th><th>" + "Hora" + "</th><th>" + "Cantidad" + "</th><th>" + "Total" + "</th>";
+        html += "<th>" + "Fecha" + "</th><th>" + "Hora" + "</th><th>" + "Cantidad" +
+                "</th><th>" + "Total" + "</th>";
+        html += "<style> body { font-family: 'Arial', sans-serif; padding: 40px; background-color: #f4f7f6;}" +
+                "h1{font-family: 'Arial', sans-serif;} " +
+                "table{font-family: 'Arial', sans-serif; width:100%; border-collapse:collapse; background-color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1);} " +
+                "th {background-color: #19546B; color: white; padding: 15px; font-size: 14px, text-align: center;}"+
+                "td {padding: 12px 15px; border-bottom: 1px solid #ddd; color: #555, text-align: center;} </style>";
 
         try {
             BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
