@@ -22,6 +22,10 @@ public class Pnl_reportes {
         Btn_RVentas.addActionListener(e -> {
            ReporteVentas();
         });
+
+        Btn_RAlbum.addActionListener(e -> {
+            ReporteAlbum();
+        });
     }
 
     private void ReporteVentas(){
@@ -45,6 +49,22 @@ public class Pnl_reportes {
             Catalogo.cargarDatosReporte();
 
             File archivo = new File("Inventario.html");
+            if (archivo.exists()) {
+                Desktop.getDesktop().browse(archivo.toURI());
+            } else {
+                JOptionPane.showMessageDialog(null, "El archivo no fue encontrado.");
+            }
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Error al abrir el reporte: " + ex.getMessage());
+        }
+    }
+
+    private void ReporteAlbum(){
+        try {
+            Album.cargarDatosReporte();
+
+            File archivo = new File("Album.html");
             if (archivo.exists()) {
                 Desktop.getDesktop().browse(archivo.toURI());
             } else {
