@@ -1,3 +1,7 @@
+import datos.Album;
+import clases.*;
+import estructuras.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -23,15 +27,29 @@ public class Pnl_album {
 
     private void setBtn_Agregar(){
         main mainFrame = (main) SwingUtilities.getWindowAncestor(Pnl_album.this.getPnl_vista_album());
-        AgregarCarta agregarCarta = new AgregarCarta(mainFrame, Pnl_vista_cartas);
+        AgregarCarta agregarCarta = new AgregarCarta(mainFrame, Pnl_vista_cartas, Pnl_vista_carta);
         mainFrame.setVisible(true);
         agregarCarta.setVisible(true);
     }
 
     private void inicializarMatriz(){
-        for (int i = 0; i < 24; i++) {
-            Pnl_vista_cartas.add(new PanelCarta(null));
+        Pnl_vista_cartas.removeAll();
+
+        for (int i = 0; i < 6; i++) {
+            for(int j = 0; j < 4; j++){
+                int posicion = i * 4 + j;
+                NodoMatriz nodo = Album.getAlbum().getNodoMatriz(i, j);
+                Carta carta = nodo.getCarta();
+
+                Pnl_vista_cartas.add(new PanelCarta(carta, Pnl_vista_carta));
+            }
         }
+        Pnl_vista_cartas.revalidate();
+        Pnl_vista_cartas.repaint();
+    }
+
+    public JPanel getPnl_vista_carta(){
+        return Pnl_vista_carta;
     }
 
     public JPanel getPnl_vista_album() {

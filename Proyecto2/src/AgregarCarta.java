@@ -15,12 +15,12 @@ public class AgregarCarta extends JDialog{
     private main mainFrame;
     MatrizAlbum album = new MatrizAlbum();
 
-    public AgregarCarta(main mainFrame, JPanel panel){
+    public AgregarCarta(main mainFrame, JPanel Pnl_vista_cartas, JPanel Pnl_vista_carta){
         super(mainFrame, "Agregar Carta", true);
         InicializarForma();
         this.mainFrame = mainFrame;
 
-        Btn_Agregar.addActionListener(e -> NuevaCarta(panel));
+        Btn_Agregar.addActionListener(e -> NuevaCarta(Pnl_vista_cartas, Pnl_vista_carta));
         Btn_Regresar.addActionListener(e -> setBtn_Regresar());
     }
 
@@ -30,7 +30,7 @@ public class AgregarCarta extends JDialog{
         setLocationRelativeTo(null);
     }
 
-    public void NuevaCarta(JPanel Pnl_vista_cartas){
+    public void NuevaCarta(JPanel Pnl_vista_cartas, JPanel Pnl_vista_carta){
         String codigoCarta = Campo_Carta.getText();
 
         if(codigoCarta.isEmpty()){
@@ -42,10 +42,11 @@ public class AgregarCarta extends JDialog{
             Carta nuevaCarta = Catalogo.buscarCarta(codigoCarta);
             if(nuevaCarta != null){
                 int posicion = album.insertarCarta(nuevaCarta);
+                Album.registroCarta(nuevaCarta);
 
                 if (posicion != -1) {
                     Pnl_vista_cartas.remove(posicion);
-                    Pnl_vista_cartas.add(new PanelCarta(nuevaCarta), posicion);
+                    Pnl_vista_cartas.add(new PanelCarta(nuevaCarta, Pnl_vista_carta), posicion);
                     Pnl_vista_cartas.revalidate();
                     Pnl_vista_cartas.repaint();
                 } else {

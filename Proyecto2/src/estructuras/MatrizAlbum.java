@@ -50,11 +50,6 @@ public class MatrizAlbum {
             if(actualcolumna.getCarta() == null){
                 actualcolumna.setCarta(carta);
 
-                String registro = carta.getCodigo() + "|" + carta.getNombre() + "|" + carta.getTipo() + "|"
-                                        + carta.getRareza() + "|" + carta.getAtaque() + "|" + carta.getDefensa() +
-                                        "|" + carta.getPs();
-                Album.registroCarta(registro);
-
                 return indice;
             }
             indice++;

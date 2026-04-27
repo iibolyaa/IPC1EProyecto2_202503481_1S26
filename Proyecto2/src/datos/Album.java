@@ -24,10 +24,15 @@ public class Album {
         }
     }
 
-    public static void registroCarta(String registro){
+    public static void registroCarta(Carta carta){
         PrintWriter escritor = null;
         try{
             escritor = new PrintWriter(new FileWriter(nombreArchivo, true));
+
+            String registro = carta.getCodigo() + "|" + carta.getNombre() + "|" + carta.getTipo() + "|"
+                    + carta.getRareza() + "|" + carta.getAtaque() + "|" + carta.getDefensa() +
+                    "|" + carta.getPs();
+
             escritor.println(registro);
         }catch(IOException e){
             System.out.println("Error al escribir el archivo: " + e.getMessage());
@@ -56,6 +61,7 @@ public class Album {
                 Carta nuevaCarta = new Carta(codigo, nombre, tipo, rareza, ataque, defensa, ps);
 
                 album.insertarCarta(nuevaCarta);
+
             }
             lector.close();
         } catch (IOException e) {
