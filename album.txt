@@ -1,5 +1,4 @@
 Carta-001|Bulbasaur|Planta|Comun|3|3|3
 Carta-002|Charmander|Fuego|Poco Comun|4|3|3
-Carta-002|Charmander|Fuego|Poco Comun|4|3|3
 Carta-004|Squirtle|Agua|Ultra Rara|3|4|3
 Carta-007|Pikachu|Electrico|Legendario|4|3|3

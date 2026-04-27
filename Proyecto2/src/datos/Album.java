@@ -69,6 +69,29 @@ public class Album {
         }
     }
 
+    //Tendría que leer la matriz
+    public static void cargarDatosReporte(){
+        try {
+            BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                String[] partes = linea.split("\\|");
+
+                String codigo = partes[0];
+                String nombre = partes[1];
+                String tipo = partes[2];
+                String rareza = partes[3];
+                int ataque = Integer.parseInt(partes[4]);
+                int defensa = Integer.parseInt(partes[5]);
+                int ps = Integer.parseInt(partes[6]);
+
+            }
+            lector.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static MatrizAlbum getAlbum() {
         return album;
     }

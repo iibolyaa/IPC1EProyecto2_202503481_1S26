@@ -39,6 +39,7 @@ public class PanelCarta extends JPanel {
 
     private void mostrarDetalle(Carta carta, JPanel panelDetalle) {
         panelDetalle.removeAll();
+        panelDetalle.setLayout(new BoxLayout(panelDetalle, BoxLayout.Y_AXIS));
 
         // Imagen grande
         File archivo = new File(carta.getImagen());

@@ -22,6 +22,7 @@ public class main extends JFrame{
     Pnl_torneo Pnl_torneo = new Pnl_torneo();
     Pnl_recompensas Pnl_recompensas = new Pnl_recompensas();
     Pnl_reportes Pnl_reportes = new Pnl_reportes();
+    Pnl_datos Pnl_datos = new Pnl_datos();
 
 
     CardLayout vista;
@@ -37,6 +38,7 @@ public class main extends JFrame{
         btn_torneo.addActionListener(e -> setBtn_torneo());
         btn_recompensas.addActionListener(e -> setBtn_recompensas());
         btn_reportes.addActionListener(e -> setBtn_reportes());
+        btn_datos.addActionListener(e -> setBtn_datos());
     }
 
     public void InicializarForma(){
@@ -89,6 +91,14 @@ public class main extends JFrame{
     public void setBtn_reportes(){
         Pnl_panel_principal.add(Pnl_reportes.getPnl_vista_reportes(), "reportes");
         vista.show(Pnl_panel_principal,"reportes");
+
+        SwingUtilities.updateComponentTreeUI(this);
+        this.repaint();
+    }
+
+    public void setBtn_datos(){
+        Pnl_panel_principal.add(Pnl_datos.getPnl_vista_datos(), "datos");
+        vista.show(Pnl_panel_principal,"datos");
 
         SwingUtilities.updateComponentTreeUI(this);
         this.repaint();

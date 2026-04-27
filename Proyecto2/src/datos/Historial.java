@@ -4,6 +4,7 @@ import clases.Juego;
 import estructuras.ListaCarrito;
 import estructuras.NodoHistorial;
 import estructuras.*;
+import reportes.*;
 
 import java.io.*;
 
@@ -52,6 +53,36 @@ public class Historial {
                 historial.InsertarAlInicio(nuevoNodo);
             }
             lector.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void cargarDatosReporte(){
+        String html = "<html><head><title>Reporte</title></head><body>";
+        html += "<h1>Ventas</h1>";
+        html += "<table>";
+        html += "<th>" + "Fecha" + "</th><th>" + "Hora" + "</th><th>" + "Cantidad" + "</th><th>" + "Total" + "</th>";
+
+        try {
+            BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
+            String linea;
+            while ((linea = lector.readLine()) != null) {
+                String[] partes = linea.split("\\|");
+
+                String fecha = partes[0];
+                String hora = partes[1];
+                String cantidad = partes[2];
+                String total = partes[3];
+
+                html += "<tr><td>" + fecha + "</td><td>" + hora + "</td><td>" + cantidad + "</td><td>"
+                        + total + "</td><tr>";
+            }
+            lector.close();
+
+            html += "</table></body></html>";
+            new GenerarReporte("Ventas").generarReporte(html);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

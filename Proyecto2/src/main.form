@@ -140,7 +140,7 @@
                 <properties>
                   <background color="-14711381"/>
                   <foreground color="-1"/>
-                  <text value="Mis datos"/>
+                  <text value="Mis Datos"/>
                 </properties>
               </component>
               <vspacer id="8c082">
