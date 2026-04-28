@@ -18,3 +18,14 @@ Carta-010|Nidoran|Veneno|Raro|4|3|3|Proyecto2/src/img/Carta-010.png
 Carta-011|Meowth|Normal|Poco Comun|3|3|3|Proyecto2/src/img/Carta-011.png
 Carta-012|Persian|Normal|Legendaria|5|4|4|Proyecto2/src/img/Carta-012.png
 Carta-013|Psyduck|Agua|Poco Comun|4|3|3|Proyecto2/src/img/Carta-013.png
+Carta-014|Bellsprout|Planta|Comun|4|3|3|Proyecto2/src/img/Carta-014.png
+Carta-015|Wartortle|Agua|Raro|4|3|3|Proyecto2/src/img/Carta-015.png
+Carta-016|Caterpie|Planta|Poco Comun|4|3|3|Proyecto2/src/img/Carta-016.png
+Carta-017|Blastoiste|Agua|Poco Comun|4|3|3|Proyecto2/src/img/Carta-017.png
+Carta-018|Pidgeot|Normal|Poco Comun|4|3|3|Proyecto2/src/img/Carta-018.png
+Carta-019|Rattata|Normal|Poco Comun|4|3|3|Proyecto2/src/img/Carta-019.png
+Carta-020|Jigglypuff|Hada|Poco Comun|4|3|3|Proyecto2/src/img/Carta-020.png
+Carta-021|Ninetiles|Fuego|Poco Comun|4|3|3|Proyecto2/src/img/Carta-021.png
+Carta-022|Raichu|Electrico|Poco Comun|4|3|3|Proyecto2/src/img/Carta-022.png
+Carta-023|Arbok|Veneno|Poco Comun|4|3|3|Proyecto2/src/img/Carta-023.png
+Carta-024|Nidorina|Veneno|Poco Comun|4|3|3|Proyecto2/src/img/Carta-024.png
