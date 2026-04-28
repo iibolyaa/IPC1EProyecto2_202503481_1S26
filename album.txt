@@ -5,3 +5,4 @@ Carta-007|Pikachu|Electrico|Legendario|4|3|3
 Carta-010|Nidoran|Veneno|Raro|4|3|3
 Carta-013|Psyduck|Agua|Poco Comun|4|3|3
 Carta-008|Vulpix|Fuego|Raro|3|3|3
+Carta-020|Jigglypuff|Hada|Poco Comun|4|3|3
