@@ -91,7 +91,7 @@ public class Catalogo {
             BufferedReader lector = new BufferedReader(new FileReader(nombreArchivo));
             String linea;
             while ((linea = lector.readLine()) != null) {
-                if(linea.contains(codigou)) {
+                if(linea.contains(codigou)){
                     String[] partes = linea.split("\\|");
 
                     String codigo = partes[0];

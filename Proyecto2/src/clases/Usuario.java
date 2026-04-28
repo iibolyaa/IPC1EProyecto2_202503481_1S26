@@ -2,11 +2,13 @@ package clases;
 
 public class Usuario {
     private String id;
+    private String password;
     private int xp;
     private int nivel;
 
-    public Usuario(String id, int xp, int nivel) {
+    public Usuario(String id, String password, int xp, int nivel) {
         this.id = id;
+        this.password = password;
         this.xp = xp;
         this.nivel = nivel;
     }
@@ -37,6 +39,14 @@ public class Usuario {
 
     public int getNivel() {
         return nivel;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public void setNivel(int nivel) {

@@ -72,7 +72,8 @@ public class ListaHistorial {
         //Insertarlo a la lista y guardar en archivo de historial
         Historial.getHistorial().InsertarAlInicio(historial);
         Historial.registroCompra(registro);
-        //main.usuarioActual.otorgarXP(50);
+        Usuarios.getUsuarioActual().otorgarXP(50);
+        System.out.println(Usuarios.getUsuarioActual().getXp());
 
         Carrito.limpiarCarrito();
         return true;

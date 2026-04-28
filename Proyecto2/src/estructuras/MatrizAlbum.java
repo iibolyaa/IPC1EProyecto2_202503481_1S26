@@ -1,6 +1,7 @@
 package estructuras;
 import clases.*;
 import datos.Album;
+import datos.Usuarios;
 
 //Clase para almacenar las cartas de la sesión actual
 
@@ -49,6 +50,10 @@ public class MatrizAlbum {
         while(actualcolumna != null){
             if(actualcolumna.getCarta() == null){
                 actualcolumna.setCarta(carta);
+
+                if(indice == 3 || indice == 7 || indice == 11 || indice == 15 || indice == 19 || indice == 23){
+                    Usuarios.getUsuarioActual().otorgarXP(100);
+                }
 
                 return indice;
             }
