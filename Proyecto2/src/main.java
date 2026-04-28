@@ -16,6 +16,7 @@ public class main extends JFrame{
     private JToggleButton btn_reportes;
     private JToggleButton btn_datos;
     private JPanel Pnl_panel_principal;
+    Usuario usuarioActual = new Usuario("U001", 0, 0);
 
     Pnl_tienda Pnl_tienda = new Pnl_tienda();
     Pnl_album Pnl_album = new Pnl_album();
@@ -51,8 +52,6 @@ public class main extends JFrame{
         Catalogo.CargarDatos();
         Album.CargarDatos();
         new main().setVisible(true);
-
-        Usuario UsuarioActual = new Usuario("U001", 0, 0);
     }
 
 

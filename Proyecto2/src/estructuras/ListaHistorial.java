@@ -72,7 +72,7 @@ public class ListaHistorial {
         //Insertarlo a la lista y guardar en archivo de historial
         Historial.getHistorial().InsertarAlInicio(historial);
         Historial.registroCompra(registro);
-        // UsuarioActual.otorgarXP(50);
+        //main.usuarioActual.otorgarXP(50);
 
         Carrito.limpiarCarrito();
         return true;
